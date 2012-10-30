@@ -1,0 +1,5 @@
+# Calculation on substitute patterns
+:%s/\(\d\+\) \(\d\+\)/\=printf("%d %d", submatch(1), submatch(2)+20)/
+
+# Add line number at the beginning of each lines
+:%s/^/\=printf("%d", line("."))/
